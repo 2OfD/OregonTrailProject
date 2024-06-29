@@ -31,6 +31,16 @@ public class WeatherEvent extends RandomEvent {
 	public void rollEvent() {
 		int roll;
 		int month = oregonTrail.getTravelState().getMonth();
+
+		/**
+		* Should the (Math.random()) below have the extra (...)? In previous Event classes it only had 1, like so: (int)(Math.random() * 100) +1;
+		* If I am mistaken or simply confused, that is alright. I am still learning how to use Java.
+		* Ps. in the PartBreakEvent class there are a few // TODOs about decreasing speed
+		* Pps. thank you for making this, I am learning a lot.
+  		*
+  		* @date 2024-06-29
+		*/
+					 
 		roll = (int)((Math.random())*100) + 1;
 		String weather = oregonTrail.getWeatherState().getWeatherString();
 		WeatherZone zone = oregonTrail.getWeatherState().getWeatherZone();
